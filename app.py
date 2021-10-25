@@ -1,7 +1,7 @@
 #IMPORTNG LIBRARIES
 from flask import Flask,render_template,request
 import keras
-import os
+
 import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
@@ -167,8 +167,7 @@ def predict2():
                 return render_template('disease_result.html',data=[disease_classes[i]],title=title)
                 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run()
 
 
     
