@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+     <head>
+      <title>CROP PREDICTION</title>
+      <style>
+          /* nav */
+          .link:hover{
+            color: #66d9ff !important;
+          }
+          .logo:hover{
+            color: #66d9ff !important;
+          }
+          /* footer */
+          .footer{
+            width:100%;
+            height: 300px;
+            background-color: rgba(97,97,97);
+            text-align: center;
+            padding-top: 20px;
+            color: white;
+          }
+          /*heading*/
+          .heading{
+            text-align: center;
+            margin: 11%;
+            border: 2px solid black;
+            padding: 5%;
+          }
+          .container{
+            height: 52vh;
+          }
+      </style>
+     </head>
+     <div class="container">
+      <h1 class="heading">
+        Best Fertilizer for your field is {{data[0]}}
+    </h1>
+    </div>
+
+     
+
+{% endblock%}
