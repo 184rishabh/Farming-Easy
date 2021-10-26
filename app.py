@@ -167,7 +167,7 @@ def predict2():
                 return render_template('disease_result.html',data=[disease_classes[i]],title=title)
                 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True,port=8000)
 
 
     
