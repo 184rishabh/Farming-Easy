@@ -6,7 +6,6 @@ import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
 import pickle
-import cv2
 import io
 from PIL import Image
 from numpy.lib.shape_base import tile
