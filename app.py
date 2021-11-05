@@ -43,7 +43,7 @@ def predict():
        v3=int(v3)
        v4=int(v4)
        v5=int(v5)
-       v6=int(v6)
+       v6=float(v6)
        v7=int(v7)
        model =  pickle.load(open('crop_recommendation','rb'))
        y = int(model.predict([[v1,v2,v3,v4,v5,v6,v7]]))
@@ -130,16 +130,16 @@ def predict2():
                 result=model.predict(img)
                 print(result)
                 i=result.argmax()
-                disease_classes = ['Tomato___Bacterial_spot',
-                                    'Tomato___Early_blight',
-                                    'Tomato___Late_blight',
-                                    'Tomato___Leaf_Mold',
-                                    'Tomato___Septoria_leaf_spot',
-                                    'Tomato___Spider_mites Two-spotted_spider_mite',
-                                    'Tomato___Target_Spot',
-                                    'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
-                                    'Tomato___Tomato_mosaic_virus',
-                                    'Tomato___healthy'
+                disease_classes = [ 'Tomato Bacterial Spot',
+                                    'Tomato Early blight',
+                                    'Tomato Late blight',
+                                    'Tomato Leaf Mold',
+                                    'Tomato Septoria Leaf Spot',
+                                    'Tomato Spider Mites',
+                                    'Tomato Target Spot',
+                                    'Tomato Yellow Leaf Curl Virus',
+                                    'Tomato Mosaic Virus',
+                                    'Tomato healthy'
                 ]
                 title="DISEASE-RESULT"
                 return render_template('disease_result.html',data=[disease_classes[i]],title=title)
@@ -158,9 +158,9 @@ def predict2():
                 i=result.argmax()
                 print("potato")
                 print(i)
-                disease_classes = ['Potato___Early_blight',
-                                    'Potato___Late_blight',
-                                    'Potato___healthy',
+                disease_classes = [' Potato Early Blight',
+                                    'Potato Late Blight',
+                                    'Potato Healthy',
                 ]
                 title="DISEASE-RESULT"
                 return render_template('disease_result.html',data=[disease_classes[i]],title=title)
