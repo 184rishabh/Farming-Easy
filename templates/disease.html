@@ -3,6 +3,11 @@
      <head>
       <title>PLANT DISEASE PREDICTION</title>
       <style>
+        .container2{
+           background: #076585;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
         .link:hover{
           color: #66d9ff !important;
         }
@@ -19,7 +24,10 @@
            justify-content: center;
            align-items: center;
        }
-       
+      .form-select {
+        width: 99%;
+       }
+
         .crop-form{
             width: 30%;
             margin-top: 5%;
@@ -47,27 +55,28 @@
         }
     </style>
      </head>
-     <div class="container">
-      <div class="row justify-content-center">
-
-          <div class="col-md-6 imginput">
-            <form action="/disease" method="post" enctype="multipart/form-data">
-              <select name="crop" class="form-select" aria-label="Default select example">
-                <option selected>Select the crop</option>
-                <option value="1">Tomato leaf disease</option>
-                <option value="2">Potato leaf disease</option>
-              </select>
-           
-                <input style="margin:5px"type="file" name='file'>
-              
-            <br>
-            <div class="button-container">
-              <button type="submit" class="btn" style="background-color:#ff4d4d; margin-top:10%">PREDICT</button>
+     <div class="container2">
+      <div class="container">
+        <div class="row justify-content-center">
+  
+            <div class="col-md-6 imginput">
+              <form action="/disease" method="post" enctype="multipart/form-data">
+                <select name="crop" class="form-select" aria-label="Default select example">
+                  <option selected>Select the crop</option>
+                  <option value="1">Tomato leaf disease</option>
+                  <option value="2">Potato leaf disease</option>
+                </select>
+             
+                  <input style="margin:5px"type="file" name='file'>
+                
+              <br>
+              <div class="button-container">
+                <button type="submit" class="btn" style="background-color:#ff4d4d; margin-top:10%">PREDICT</button>
+              </div>
+              </form> 
             </div>
-            </form> 
-          </div>
-      </div>
-  </div>
-
-
+        </div>
+    </div>
+     </div>
+  
 {% endblock%}

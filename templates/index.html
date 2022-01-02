@@ -25,7 +25,7 @@
           background-color: aqua;
         }
         .aboutus{
-          border: 1px solid black;
+        border: 1px solid black;
          width:100%;
          padding:2rem;
          box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
@@ -64,16 +64,15 @@
        .slider-text p{
          font-size: 1.8rem;
        }
-       
+       .medium-div{
+        display: none;
+       }
        @media only screen and (max-width: 600px) {
         .xyz{
-         height: 50vh;
+         height: 45vh;
          }
 }</style>
      </head>
-
-
-
      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -117,41 +116,41 @@
     </div>
     <!-- end of slider -->
     <!-- about -->
-    <h1 class="about">SERVICES</h1>
+    <h1 class="about mt-3">SERVICES</h1>
     <hr style="width: 18%; text-align:center; margin-left: 41%; height:4px; margin-top: 1px; color:#66d9ff;">
 
     <!-- section1-->
     <div class="container section">
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
               <div class="card" style="width: 100%">
                 <img src="static/crop1.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h3 style="text-align: center;">CROP</h3>
                   <hr style="width: 18%; text-align:center; margin-left: 41%; height:4px; margin-top: 1px; color:red; margin-bottom: 3px;">
-                  <p class="card-text">Reccomends best type of crop to be cultivated for your field</p>
+                  <p class="card-text mt-3 mb-3">Recommends best type of crop to be cultivated for your field.</p>
                   <button type="button" class="btn btn-outline-info" style="margin-left: 36%;"><a style="text-decoration: none; color:black" href="/crop">PREDICT</a></button>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
               <div class="card" style="width: 100%;">
                 <img src="static/crop2.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h3 style="text-align: center;">FERTILIZER</h3>
                   <hr style="width: 18%; text-align:center; margin-left: 41%; height:4px; margin-top: 1px; color:red;margin-bottom: 3px;">
-                  <p class="card-text">Reccomends best type of fertilizer which can be used for your crop</p>
+                  <p class="card-text mt-3 mb-3">Reccomends best type of fertilizer which can be used for your crop.</p>
                   <button type="button" class="btn btn-outline-info" style="margin-left: 36%;"><a  style="text-decoration: none; color:black" href="/fertilizer">PREDICT</a></button>
                 </div>
               </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mt-3">
             <div class="card" style="width: 100%;">
               <img src="static/crop3.jpeg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h3 style="text-align: center;">PLANT DISEASE</h3>
                 <hr style="width: 18%; text-align:center; margin-left: 41%; height:4px; margin-top: 1px; color:red;margin-bottom: 3px;">
-                <p class="card-text">Predicts the name of disease which affected your crop</p>
+                <p class="card-text mt-3 mb-3">Predicts the name of disease which affected your crop.</p>
                 <button type="button" class="btn btn-outline-info" style="margin-left: 36%;"><a style="text-decoration: none; color:black" href="disease-predicton">PREDICT</a></button>
               </div>
             </div>
@@ -160,16 +159,14 @@
       </div>
     <!-- end of section1 -->
     <!-- about -->
-          <h1 class="about">ABOUT US</h1>
-          <hr style="width: 18%; text-align:center; margin-left: 41%; height:4px; margin-top: 1px; color:red; margin-bottom: 4%;">
+          <h1 class="about mt-5">ABOUT US</h1>
+          <hr style="width: 18%; text-align:center; margin-left: 41%; height:4px; margin-top: 1px; color:red; margin-bottom: 2%;">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-9">
-                <div class="aboutus">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, consequatur architecto, ipsa possimus nulla quibusdam dolorem reprehenderit nihil facilis cum doloribus totam neque molestias vel provident sapiente assumenda repellat ad?
-                gssannm ask ssndn
-                risabh is a good boy
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque ullam ea culpa, tempore hic, quia esse accusantium adipisci ducimus unde pariatur quas veritatis harum corporis placeat odio molestiae numquam alias?
+                <div class="aboutus" style="font-size: 1.3rem; font-family: cursive;">
+                  At <strong>Farm Easy</strong>, our mission is to help farmers to find the best crop for their field, the best fertilizers, and help in detecting crop disease. We use <strong>machine learning</strong> and <strong>deep learning</strong> technology to make farming a little easy for farmers.
+                  <br>Our <strong>mission</strong> is to design a better, sustainable food system in which farming is easy, profitable, and accessible to all. Our vision is a world where farming empowers people and improves their lives. We are making farming exciting.
                 </div>
               </div>
             </div>
