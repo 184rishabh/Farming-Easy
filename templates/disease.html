@@ -1,82 +1,94 @@
-{% extends "base.html" %}
-{% block content %}
-     <head>
-      <title>PLANT DISEASE PREDICTION</title>
-      <style>
-        .container2{
-           background: #076585;  /* fallback for old browsers */
-           background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
-           background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .link:hover{
-          color: #66d9ff !important;
-        }
-        .logo:hover{
-          color: #66d9ff !important;
-        }
-       .container{
-           height:92vh;
-           width:100%;
-       }
-       .imginput{
-           display: flex;
-           height: 80vh;
-           justify-content: center;
-           align-items: center;
-       }
-      .form-select {
-        width: 99%;
-       }
+{% extends "base.html" %} {% block content %}
 
-        .crop-form{
+<head>
+    <title>PLANT DISEASE PREDICTION</title>
+    <style>
+        .container2 {
+            background: #076585;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #fff, #076585);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #fff, #076585);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .link:hover {
+            color: #66d9ff !important;
+        }
+        
+        .logo:hover {
+            color: #66d9ff !important;
+        }
+        
+        .container {
+            height: 92vh;
+            width: 100%;
+        }
+        
+        .imginput {
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-select {
+            width: 99%;
+        }
+        
+        .crop-form {
             width: 30%;
             margin-top: 5%;
         }
-        @media only screen and (max-width: 700px){
-          .crop-form{
-            width: 70%;
-          }
+        
+        @media only screen and (max-width: 700px) {
+            .crop-form {
+                width: 70%;
+            }
         }
-        .footer{
-          width:100%;
-          height: 300px;
-          background-color: rgba(97,97,97);
-          text-align: center;
-          padding-top: 20px;
-          color: white;
+        
+        .footer {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(97, 97, 97);
+            text-align: center;
+            padding-top: 20px;
+            color: white;
         }
-        .button-container{
-          display: flex;
-          justify-content: center;
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
         }
-        .input-conatiner{
-          display: flex;
-          justify-content: center;
+        
+        .input-conatiner {
+            display: flex;
+            justify-content: center;
         }
     </style>
-     </head>
-     <div class="container2">
-      <div class="container">
+</head>
+<div class="container2">
+    <div class="container">
         <div class="row justify-content-center">
-  
+
             <div class="col-md-6 imginput">
-              <form action="/disease" method="post" enctype="multipart/form-data">
-                <select name="crop" class="form-select" aria-label="Default select example">
+                <form action="/disease" method="post" enctype="multipart/form-data">
+                    <select name="crop" class="form-select" aria-label="Default select example">
                   <option selected>Select the crop</option>
                   <option value="1">Tomato leaf disease</option>
                   <option value="2">Potato leaf disease</option>
                 </select>
-             
-                  <input style="margin:5px"type="file" name='file'>
-                
-              <br>
-              <div class="button-container">
-                <button type="submit" class="btn" style="background-color:#ff4d4d; margin-top:10%">PREDICT</button>
-              </div>
-              </form> 
+
+                    <input style="margin:5px" type="file" name='file'>
+
+                    <br>
+                    <div class="button-container">
+                        <button type="submit" class="btn" style="background-color:#ff4d4d; margin-top:10%">GET RESULT</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-     </div>
-  
+</div>
+
 {% endblock%}

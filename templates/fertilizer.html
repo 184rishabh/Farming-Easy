@@ -1,54 +1,61 @@
-{% extends "base.html" %}
-{% block content %}
-     <head>
-      <title>FERTILIZER RECOMMENDATION</title>
-      <style>
-          .link:hover{
+{% extends "base.html" %} {% block content %}
+
+<head>
+    <title>FERTILIZER RECOMMENDATION</title>
+    <style>
+        .link:hover {
             color: #66d9ff !important;
-          }
-          .logo:hover{
+        }
+        
+        .logo:hover {
             color: #66d9ff !important;
-          }
-          .container1{
-              background: #076585;  /* fallback for old browsers */
-              background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
-              background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-              height:100vh;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-          }
-         
-          .crop-form{
-              width: 30%;
-              margin-top: 5%;
-          }
-          @media only screen and (max-width: 700px){
-            .crop-form{
-              width: 70%;
+        }
+        
+        .container1 {
+            background: #076585;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #fff, #076585);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #fff, #076585);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .crop-form {
+            width: 30%;
+            margin-top: 5%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .crop-form {
+                width: 70%;
             }
-          }
-          .footer{
-            width:100%;
+        }
+        
+        .footer {
+            width: 100%;
             height: 300px;
-            background-color: rgba(97,97,97);
+            background-color: rgba(97, 97, 97);
             text-align: center;
             padding-top: 20px;
             color: white;
-          }
-      </style>
-     </head>
+        }
+    </style>
+</head>
 
-     <div class="container1">
-      <div class="crop-form">
+<div class="container1">
+    <div class="crop-form">
         <form action="/predict1" method='post'>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Moisture</label>
-                <input name ='moisture' type="number" class="form-control" placeholder="Enter Moisture Content" min="1" max="100" required>
-              </div>
-              <div class="mb-3">
+                <input name='moisture' type="number" class="form-control" placeholder="Enter Moisture Content" min="1" max="100" required>
+            </div>
+            <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Crop Type</label>
-                <select name ='croptype'  class="form-control" placeholder="Enter Crop Type" required>
+                <select name='croptype' class="form-control" placeholder="Enter Crop Type" required>
                   <option value="0">Barley</option>
                   <option value="1">Cotton</option>
                   <option value="2">Ground Nuts</option>
@@ -62,27 +69,25 @@
                   <option value="10">Wheat</option>
                   
                 </select>
-                
-              </div>
+
+            </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Nitrogen</label>
-                <input name ='nitrogen' type="number" class="form-control" placeholder="Enter Nitrogen Content(mg/kg)" min="1" max="200" required>
-              </div>
+                <input name='nitrogen' type="number" class="form-control" placeholder="Enter Nitrogen Content(mg/kg)" min="1" max="200" required>
+            </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Phosphorus</label>
-              <input name ='phosphorus' type="number" class="form-control" placeholder="Enter Phosphorus Content(mg/kg)" min="1" max="200" required>
+                <label for="exampleInputPassword1" class="form-label">Phosphorus</label>
+                <input name='phosphorus' type="number" class="form-control" placeholder="Enter Phosphorus Content(mg/kg)" min="1" max="200" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Potassium</label>
-                <input name ='potassium' type="number" class="form-control" placeholder="Enter Potassium Content(mg/kg)" min="1" max="200" required>
-              </div>
-             
-            <button type="submit" class="btn" style="margin-left: 37%; background-color:#ff4d4d;">PREDICT</button>
-          </form>
-      </div>
-  </div>
-     
+                <input name='potassium' type="number" class="form-control" placeholder="Enter Potassium Content(mg/kg)" min="1" max="200" required>
+            </div>
+
+            <button type="submit" class="btn" style="margin-left: 37%; background-color:#ff4d4d;">GET RESULT</button>
+        </form>
+    </div>
+</div>
+
 
 {% endblock%}
-
-
