@@ -1,159 +1,137 @@
-{% extends "base.html" %}
-{% block content %}
-     <head>
-      <title>CROP PREDICTION</title>
-      <style>
-          /* nav */
-          .link:hover{
+{% extends "base.html" %} {% block content %}
+
+<head>
+    <title>CROP PREDICTION</title>
+    <style>
+        /* nav */
+        
+        .link:hover {
             color: #66d9ff !important;
-          }
-          .logo:hover{
+        }
+        
+        .logo:hover {
             color: #66d9ff !important;
-          }
-          /* footer */
-          .footer{
-            width:100%;
+        }
+        /* footer */
+        
+        .footer {
+            width: 100%;
             height: 300px;
-            background-color: rgba(97,97,97);
+            background-color: rgba(97, 97, 97);
             text-align: center;
             padding-top: 20px;
             color: white;
-          }
-           .container{
-               margin-bottom: 5%;    
-           }
-           /* content of crop*/
-           .content p{
+        }
+        
+        .container {
+            margin-bottom: 5%;
+        }
+        /* content of crop*/
+        
+        .content p {
             margin-top: 6%;
             word-spacing: 5px;
             font-size: 1.2rem;
             font-weight: 400;
-           }
-           /*
+        }
+        /*
            heading*/
-           .heading{
+        
+        .heading {
             text-align: center;
             margin-top: 10%;
             font-size: 4rem;
             font-family: initial;
             margin-bottom: 3%;
-           }
-           /*box xhadow*/
-           .box{
+        }
+        /*box xhadow*/
+        
+        .box {
             border: 2px solid black;
             padding: 3%;
             border-radius: 25px;
-            box-shadow: 12px 10px rgba(0, 0, 0, 0.2);
-           }
-      </style>
-     </head>
-     <h1 class="heading">{{data[0]}}</h1>
-     <div class="container">
-         <div class="row justify-content-center box">
-           <div class="col-md-4">
-               <img class="img-fluid" src="/static/{{data[0]}}.jpeg">
-           </div>
-           <div class="col-md-6 content">
-             
-
-             {% if data[0]=="apple"%}
-             <p>For best growth and fruiting, apple trees need 100 cm to 125 cm of annual rainfall, evenly spread throughout the year. Too much of rainfall and fog near the fruit maturity period would result in poor fruit quality with improper color development of fruit and fungal spots on the fruit surface.</p>
-             {% endif %}
+            box-shadow: 12px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<h1 class="heading">{{data[0]}}</h1>
+<div class="container">
+    <div class="row justify-content-center box">
+        <div class="col-md-4">
+            <img class="img-fluid" src="/static/{{data[0]}}.jpeg">
+        </div>
+        <div class="col-md-6 content">
 
 
-             {% if data[0]=="banana"%}
-             <p>In Banana Farming, Soil for bananas should have good drainage, adequate fertility, and moisture. Deep, rich loamy soil with a pH between 6-7.5 is most preferred for banana cultivation. Ill drained, poorly aerated, and nutritionally deficient soils are not suitable for the banana</p>
-             {% endif %}
+            {% if data[0]=="apple"%}
+            <p>For best growth and fruiting, apple trees need 100 cm to 125 cm of annual rainfall, evenly spread throughout the year. Too much of rainfall and fog near the fruit maturity period would result in poor fruit quality with improper color development
+                of fruit and fungal spots on the fruit surface.</p>
+            {% endif %} {% if data[0]=="banana"%}
+            <p>In Banana Farming, Soil for bananas should have good drainage, adequate fertility, and moisture. Deep, rich loamy soil with a pH between 6-7.5 is most preferred for banana cultivation. Ill drained, poorly aerated, and nutritionally deficient
+                soils are not suitable for the banana</p>
+            {% endif %} {% if data[0]=="blackgram"%}
+            <p>The most ideal soil is a well drained loam with pH of 6.5 to 7.8. Black gram cannot be grown on alkaline and saline soils. Land is prepared like any other kharif season pulse crop. However during summer it requires a thorough preparation to
+                give a pulverized free from stubbles and weeds completely.</p>
+            {% endif %} {% if data[0]=="chickpea"%}
+            <p>The crop can not tolerate wet soils. Avoid planting chickpea in low-lying areas of fields that are susceptible to flooding. Chickpea seeds need to be inoculated at seeding with the proper Rhizobium strain.</p>
+            {% endif %} {% if data[0]=="coconut"%}
+            <p>For coconut planting use pits that are filled up with top soil and powdered cow dung / compost up to a depth of 50 to 60 cm. Then take a small pit inside this, so as to accommodate the nut attached to the seedling. Plant the seedling inside
+                this pit and fill up with soil. Press the soil well so as to avoid water stagnation.</p>
+            {% endif %} {% if data[0]=="coffee"%}
+            <p>When growing coffee plants, the soil needs to stay moist, but not soaking wet. Also, make sure that both the soil and the pot your coffee plant is growing in has good drainage. The humidity around the plant will need to stay high as well.
+                Setting your coffee plant on a water-filled pebble tray will help with humidity</p>
+            {% endif %} {% if data[0]=="cotton"%}
+            <p>Ensure sufficient soil moisture and soil temperature before cotton planting. Plant cotton under optimum weather conditions to limit the risk of diseases.</p>
+            {% endif %} {% if data[0]=="grapes"%}
+            <p>Grape is usually propagated by hard wood cuttings, though propagation by seed, soft wood cuttings, layering, grafting and budding is also used in some cases. The grapevines are usually planted in pits. The size of the pit depends upon the
+                spacing of the vines and also on the specific requirements of the variety.</p>
+            {% endif %} {% if data[0]=="jute"%}
+            <p>Jute requires a hot and humid climate, the temperature fluctuation between 24o C and 37o C. However, the optimum being around 34 o C. There should not be constant rain or water logged conditions which are harmful for jute cultivation. In the
+                seedling stage, water-logging is not advised.</p>
+            {% endif %} {% if data[0]=="kidneybeans"%}
+            <p>Kidneybeans can be grown on wide range of soils from light sandy to heavy clay soils. Well drained loamy soil is good for kidney beans cultivation. It is very sensitive to saline soils. Gives best result when pH of soil is 5.5 to 6. </p>
+            {% endif %} {% if data[0]=="lentil"%}
+            <p>Lentils enjoy evenly moist soil, though they can tolerate short periods of drought. They do not tolerate waterlogged soil, so aim to keep them more dry than soaked. Fertilize them. For the best lentil crop, side-dress your lentil plants twice
+                in the spring with compost tea or another natural fertilizer.</p>
+            {% endif %} {% if data[0]=="maize"%}
+            <p>A soil with pH of 5.5 to 7.0 and a good drainage capacity is preferred for maize cultivation. Loamy sand, black soil and even clayey loam is suitable for maize. Both red soil and alluvial are said to be optimal for growing maize. However,
+                it requires a good amount of organic matter even in a super-fertile soil.</p>
+            {% endif %} {% if data[0]=="mango"%}
+            <p>You must situate the seed with ¼-inch protruding above the soil surface when growing mango trees. Must keep the soil evenly moist and place the pot where temperatures remain a minimum of 70 F. (21 C.). Sprouting can occur as early as eight
+                to 14 days, but may take up to three weeks</p>
+            {% endif %} {% if data[0]=="mothbeans"%}
+            <p>Row planting should be done 30 to 90 cm apart, with seeds sown 2.5 to 4 cm deep. It takes 75 to 90 days for moth bean to mature, and is frequently planted at the end of the rainy season. A drawback to this crop is its difficulty to harvest.</p>
+            {% endif %} {% if data[0]=="mungbean"%}
+            <p>Mung beans like fertile, sandy, loam soil with excellent drainage and a pH of 6.2 to 7.2. Till the soil to remove weeds, large rocks, and clods and amend the soil with a couple of inches of compost worked in. Plant the seed when the soil has
+                warmed to 65 degrees F. (18 C.).</p>
+            {% endif %} {% if data[0]=="muskmelon"%}
+            <p>Rich soil with plenty of compost added. Often grown in widely spaced enriched hills, or in well-aged compost heaps that include some soil. Sow seeds 1 inch deep in rows, or in hills spaced 6 feet apart. After 2 weeks, thin to 2 plants per
+                hill. To prevent insect problems and encourage early growth, cover seedlings with row cover (fleece) tunnels until they begin to bloom.
+            </p>
+            {% endif %} {% if data[0]=="orange"%}
+            <p>
+                Orange is grown under both subtropical and tropical conditions. It is grown in almost all the sates of India. Climate and soils: Dry and arid conditions, coupled with distinct summer and winter having low rainfall, are most favourable to the growth of
+                the sweet orange.
+            </p>
+            {% endif %} {% if data[0]=="papaya"%}
+            <p>About 15-20 cm. tall seedlings are chosen for planting in about two months. Papaya is planted during spring (February-March), monsoon (June-July) and autumn (October-November). A spacing of 1.8 x 1.8 m. is normally followed.</p>
+            {% endif %} {% if data[0]=="pigeonpeas"%}
+            <p>Choose an open, full sun-lit planting area, as the pigeon pea thrives in well-drained soils and a hot environment. The plant will not grow in waterlogged areas. 2. Sow seeds 4cm (1.5 inches) deep on 0.5 - 1 m (1½ - 3 feet) wide rows.</p>
+            {% endif %} {% if data[0]=="rice"%}
+            <p>Treat the seed with recommended fungicides for minimizing the disease incidence. Sow the pre-germinated seed of paddy in nursery bed as per guidelines prescribed by the State Agricultural University. Use recommended doses of farm yard manure,
+                macro and micro nutrients in nursery beds at the time of sowing.</p>
+            {% endif %} {% if data[0]=="pomegranate"%}
+            <p>Climate Required for Pomegranate Farming It needs hot and dry climatic conditions during fruit development and ripening stages. It needs hot and dry weather in summer and cold and dry weather during winter. However, it cannot tolerate frost.
+                It does not grow well in shades</p>
+            {% endif %} {% if data[0]=="watermelon"%}
+            <p>The light and temperature are vital requirements for proper flowering in watermelon crop. Soil pH for watermelon crop should be in between 6.5 to 7.5 for best growth and development. Drainage of the soil is most important since the waterlogged
+                conditions may not support the survival of the crop</p>
+            {% endif %}
 
-             {% if data[0]=="blackgram"%}
-             <p>The most ideal soil is a well drained loam with pH of 6.5 to 7.8. Black gram cannot be grown on alkaline and saline soils. Land is prepared like any other kharif season pulse crop. However during summer it requires a thorough preparation to give a pulverized free from stubbles and weeds completely.</p>
-             {% endif %}
+        </div>
+    </div>
+</div>
 
-             {% if data[0]=="chickpea"%}
-             <p>The crop can not tolerate wet soils. Avoid planting chickpea in low-lying areas of fields that are susceptible to flooding. Chickpea seeds need to be inoculated at seeding with the proper Rhizobium strain.</p>
-             {% endif %}
 
-             {% if data[0]=="coconut"%}
-             <p>For coconut planting use pits that are filled up with top soil and powdered cow dung / compost up to a depth of 50 to 60 cm. Then take a small pit inside this, so as to accommodate the nut attached to the seedling. Plant the seedling inside this pit and fill up with soil. Press the soil well so as to avoid water stagnation.</p>
-             {% endif %}
-
-             {% if data[0]=="coffee"%}
-             <p>When growing coffee plants, the soil needs to stay moist, but not soaking wet. Also, make sure that both the soil and the pot your coffee plant is growing in has good drainage. The humidity around the plant will need to stay high as well. Setting your coffee plant on a water-filled pebble tray will help with humidity</p>
-             {% endif %}
-
-             {% if data[0]=="cotton"%}
-             <p>Ensure sufficient soil moisture and soil temperature before cotton planting. Plant cotton under optimum weather conditions to limit the risk of diseases.</p>
-             {% endif %}
-
-             {% if data[0]=="grapes"%}
-             <p>Grape is usually propagated by hard wood cuttings, though propagation by seed, soft wood cuttings, layering, grafting and budding is also used in some cases. The grapevines are usually planted in pits. The size of the pit depends upon the spacing of the vines and also on the specific requirements of the variety.</p>
-             {% endif %}
-
-             {% if data[0]=="jute"%}
-             <p>Jute requires a hot and humid climate, the temperature fluctuation between 24o C and 37o C. However, the optimum being around 34 o C. There should not be constant rain or water logged conditions which are harmful for jute cultivation. In the seedling stage, water-logging is not advised.</p>
-             {% endif %}
-
-             {% if data[0]=="kidneybeans"%}
-             <p>Kidneybeans can be grown on wide range of soils from light sandy to heavy clay soils. Well drained loamy soil is good for kidney beans cultivation. It is very sensitive to saline soils. Gives best result when pH of soil is 5.5 to 6.  </p>
-             {% endif %}
-
-             {% if data[0]=="lentil"%}
-             <p>Lentils enjoy evenly moist soil, though they can tolerate short periods of drought. They do not tolerate waterlogged soil, so aim to keep them more dry than soaked. Fertilize them. For the best lentil crop, side-dress your lentil plants twice in the spring with compost tea or another natural fertilizer.</p>
-             {% endif %}
-
-             {% if data[0]=="maize"%}
-             <p>A soil with pH of 5.5 to 7.0 and a good drainage capacity is preferred for maize cultivation. Loamy sand, black soil and even clayey loam is suitable for maize. Both red soil and alluvial are said to be optimal for growing maize. However, it requires a good amount of organic matter even in a super-fertile soil.</p>
-             {% endif %}
-
-             {% if data[0]=="mango"%}
-             <p>You must situate the seed with ¼-inch protruding above the soil surface when growing mango trees. Must keep the soil evenly moist and place the pot where temperatures remain a minimum of 70 F. (21 C.). Sprouting can occur as early as eight to 14 days, but may take up to three weeks</p>
-             {% endif %}
-
-             {% if data[0]=="mothbeans"%}
-             <p>Row planting should be done 30 to 90 cm apart, with seeds sown 2.5 to 4 cm deep. It takes 75 to 90 days for moth bean to mature, and is frequently planted at the end of the rainy season. A drawback to this crop is its difficulty to harvest.</p>
-             {% endif %}
-
-             {% if data[0]=="mungbean"%}
-             <p>Mung beans like fertile, sandy, loam soil with excellent drainage and a pH of 6.2 to 7.2. Till the soil to remove weeds, large rocks, and clods and amend the soil with a couple of inches of compost worked in. Plant the seed when the soil has warmed to 65 degrees F. (18 C.).</p>
-             {% endif %}
-
-             {% if data[0]=="muskmelon"%}
-             <p>Rich soil with plenty of compost added. Often grown in widely spaced enriched hills, or in well-aged compost heaps that include some soil.
-               Sow seeds 1 inch deep in rows, or in hills spaced 6 feet apart. After 2 weeks, thin to 2 plants per hill. To prevent insect problems and encourage early growth, cover seedlings with row cover (fleece) tunnels until they begin to bloom.
-             </p>
-             {% endif %}
-
-             {% if data[0]=="orange"%}
-             <p>
-              Orange is grown under both subtropical and tropical conditions. It is grown in almost all the sates of India. Climate and soils: Dry and arid conditions, coupled with distinct summer and winter having low rainfall, are most favourable to the growth of the sweet orange.
-             </p>
-             {% endif %}
-
-             {% if data[0]=="papaya"%}
-             <p>About 15-20 cm. tall seedlings are chosen for planting in about two months. Papaya is planted during spring (February-March), monsoon (June-July) and autumn (October-November). A spacing of 1.8 x 1.8 m. is normally followed.</p>
-             {% endif %}
-
-             {% if data[0]=="pigeonpeas"%}
-             <p>Choose an open, full sun-lit planting area, as the pigeon pea thrives in well-drained soils and a hot environment. The plant will not grow in waterlogged areas. 2. Sow seeds 4cm (1.5 inches) deep on 0.5 - 1 m (1½ - 3 feet) wide rows.</p>
-             {% endif %}
-
-             {% if data[0]=="rice"%}
-             <p>Treat the seed with recommended fungicides for minimizing the disease incidence. Sow the pre-germinated seed of paddy in nursery bed as per guidelines prescribed by the State Agricultural University. Use recommended doses of farm yard manure, macro and micro nutrients in nursery beds at the time of sowing.</p>
-             {% endif %}
-
-             {% if data[0]=="pomegranate"%}
-             <p>Climate Required for Pomegranate Farming
-               It needs hot and dry climatic conditions during fruit development and ripening stages. It needs hot and dry weather in summer and cold and dry weather during winter. However, it cannot tolerate frost. It does not grow well in shades</p>
-             {% endif %}
-
-             {% if data[0]=="watermelon"%}
-             <p>The light and temperature are vital requirements for proper flowering in watermelon crop. Soil pH for watermelon crop should be in between 6.5 to 7.5 for best growth and development. Drainage of the soil is most important since the waterlogged conditions may not support the survival of the crop</p>
-             {% endif %}
-
-           </div>
-         </div>
-     </div>
-
-     
 
 {% endblock%}
