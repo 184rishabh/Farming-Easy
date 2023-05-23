@@ -1,6 +1,7 @@
 ## Farming Easy
 LINK TO THE PROJECT
  * http://farming-easy.herokuapp.com/
+ * https://farming-easy.onrender.com
 
 ## ABOUT THE PROJECT 
 
